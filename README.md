@@ -1,7 +1,7 @@
 # React component starter
 
 A boilerplate project for developing react components as standalone npm packages.  
-After the initial setup, you can easily work on components in isolation while using and them in larger projects.
+After the initial setup, you can easily work on components in isolation while using them in larger projects.
 
 ## Usage
 
@@ -9,7 +9,7 @@ After the initial setup, you can easily work on components in isolation while us
 Make sure `"name"` is unique and does not collide with the name of another package.  
 
 ### build
-`npm run build` to create a transpiled ES5 version of your `./src` and copies it to `./lib`, which is your actual export dir.  
+`npm run build` to create a transpiled ES5 version of your `./src` and copy it to `./lib`, which is the module you actually export.  
 `npm run build-watch` to keep rebuilding whenever any source files change.
 
 ### react-dev-server
