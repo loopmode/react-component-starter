@@ -1,2 +1,2 @@
-import Component from './Component/Component';
-export default Component;
+import Grandfather from './Component/Grandfather';
+export default Grandfather;

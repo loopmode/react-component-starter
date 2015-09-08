@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Component from './Component/Component';
+import Grandfather from './Component/Grandfather';
 
 const element = document.createElement('div');
-React.render(<Component />, element);
+React.render(<Grandfather />, element);
 document.body.appendChild(element);
