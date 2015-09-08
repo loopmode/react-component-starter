@@ -1,0 +1,47 @@
+{
+  "name": "react-component-starter",
+  "version": "0.5.0",
+  "description": "Boilerplate setup for building standalone react component packages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node webpack.dev-server",
+    "build": "babel src -d lib",
+    "build-watch": "babel src -d lib -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:loopmode/react-component-starter.git"
+  },
+  "keywords": [
+    "react",
+    "custom"
+  ],
+  "author": "Jovica Aleksic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loopmode/react-component-starter/issues"
+  },
+  "homepage": "https://github.com/loopmode/react-component-starter",
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.15",
+    "babel-eslint": "^3.1.19",
+    "babel-loader": "^5.2.2",
+    "eslint": "^0.23.0",
+    "eslint-loader": "^0.14.0",
+    "eslint-plugin-react": "^2.5.2",
+    "flowcheck": "^0.2.7",
+    "flowcheck-loader": "^1.0.0",
+    "html-webpack-plugin": "^1.5.2",
+    "opn": "^3.0.2",
+    "react-hot-loader": "^1.2.7",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.0",
+    "webpack-dev-server": "^1.10.1",
+    "webpack-merge": "^0.1.1"
+  },
+  "dependencies": {
+    "react": "~0.13.3"
+  }
+}
