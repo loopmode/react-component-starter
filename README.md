@@ -5,6 +5,11 @@ After the initial setup, you can easily work on components in isolation while us
 
 ## Usage
 
+    git clone git@github.com:loopmode/react-component-starter.git
+    cd react-component-starter
+    npm install
+    npm start
+
 ### package.json
 Make sure `"name"` is unique and does not collide with the name of another package.  
 
