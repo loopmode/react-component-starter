@@ -5,7 +5,14 @@ After the initial setup, you can easily work on components in isolation while us
 
 ## Usage
 
+1) Make sure you have node.js installed (check using the `node --version` command, install from [node.js](https://nodejs.org) or [io.js](https://iojs.org/en/) if not installed)
+
+2) Clone the repository:
+
     git clone git@github.com:loopmode/react-component-starter.git
+
+3) Then install and start the project:
+
     cd react-component-starter
     npm install
     npm start
