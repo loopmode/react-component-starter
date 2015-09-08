@@ -1,7 +1,7 @@
 # React component starter
 
 A boilerplate project for developing react components as standalone npm packages.  
-After the initial setup, you can easily work on components in isolation while using and them in larger projects.
+After the initial setup, you can easily work on components in isolation while using them in larger projects.
 
 ## Usage
 
