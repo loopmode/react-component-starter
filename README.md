@@ -30,23 +30,23 @@ Run `npm start` to start a development server and preview your component in the 
 ### npm link
 Run `npm link` in the root folder of the package. 
 Then, in your actual projects, install it with `npm link your-package-name` and use it just like you would use any other npm module.  
-This created a symlink relation, so whenever you rebuild to the `./lib` folder, the changes are immediatly available to the projects depending on your package.
+Now your component is symlinked into your project, so any changes you make to your component are available dependent projects right after you build your sources. Keep the `build-watch` to rebuild whenever you change your sources.
 
-### in your code
+### in your actual projects
 
-Using ES6:
+Import or require your component using ES6:
 
     import MyModule from 'your-package-name';
 
-Using CommonJS:
+or using ES5 CommonJS:
 
     var MyModule = require('your-package-name');
 
 ## Notes
   
-- If you work on multiple components simultanously and need multiple live previews too, you must specify a different port in each `webpack.config.js`.
+- To work on multiple standalone components simultanously, you need to tweak the `DEV_SERVER.port` settings in `webpack.config.js`.
 
 ## Todos
 
-- Add setup for testing the component
-- Find a way to trigger hot reload when using `npm link` and `npm run build-watch` together
+- Install testing environment
+- Trigger hot reload in dependent projects. It must be possible!
