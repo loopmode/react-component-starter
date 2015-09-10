@@ -1,24 +1,15 @@
 # React component starter
 
-A boilerplate project for developing react components as standalone npm packages.  
-After the initial setup, you can easily work on components in isolation while using them in larger projects.
+Quickstart your react component development and use components as npm modules!
 
 ## Usage
 
-1) Make sure you have node.js installed (check using the `node --version` command, install from [node.js](https://nodejs.org) or [io.js](https://iojs.org/en/) if not installed)
-
-2) Clone the repository:
-
-    git clone git@github.com:loopmode/react-component-starter.git
-
-3) Then install and start the project:
+Make sure you have [node.js](https://nodejs.org) installed and `git clone git@github.com:loopmode/react-component-starter.git` this repository.
+Then install and start the project:
 
     cd react-component-starter
     npm install
     npm start
-
-### package.json
-Make sure `"name"` is unique and does not collide with the name of another package.  
 
 ### build
 `npm run build` to create a transpiled ES5 version of your `./src` and copy it to `./lib`, which is the module you actually export.  
