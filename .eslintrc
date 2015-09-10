@@ -24,6 +24,7 @@
     "quotes": [1, "single"],
     "comma-dangle": 0,
     "comma-spacing": 1,
+    "key-spacing": 0,
     "dot-notation": 0,
     "react/jsx-boolean-value": 1,
     "react/jsx-quotes": 1,
