@@ -1,0 +1,29 @@
+:local(.Button) {
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+
+    color: white;
+    background: steelblue;
+    &:hover {
+        background: dodgerblue;
+    }
+    &:active {
+        background: lightsteelblue;
+    }
+    &.selected {
+        background: deepskyblue;
+    }
+
+    &[disabled] {
+        color: #ccc;
+        background: lightslategrey;
+        cursor: default;
+        &:hover, &:active, &.selected {
+            background: lightslategrey;
+        }
+    }
+}

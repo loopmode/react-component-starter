@@ -1,0 +1,54 @@
+:local(.Panel) {
+    
+    $color: dodgerblue;
+    $border: 1px solid $color;
+    $radius: 10px;
+
+    min-width: 32px;
+    min-height: 32px;
+
+    font-family: 'Roboto', sans-serif;
+
+    display: inline-flex;
+    flex-direction: column;
+
+    @mixin header {
+        border-top: $border;
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+    }
+    @mixin footer {
+        border-bottom: $border;
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+
+    header, section {
+        padding: 10px;
+    }
+    header {
+        background: $color;
+        color: white;
+        user-select: none;
+        cursor: default;
+        @include header;
+    }
+    section {
+        flex: 1;
+        border-left: $border;
+        border-right: $border;
+        @include footer;
+    }
+
+    &.noHeader section {
+        @include header;
+    }
+    &.noContent header {
+        @include footer;
+    }
+    &.noHeader.noContent {
+        border: $border;
+        @include header;
+        @include footer;        
+    }
+}
