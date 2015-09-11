@@ -1,6 +1,6 @@
 {
   "name": "react-component-starter",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Boilerplate setup for building standalone react component packages.",
   "main": "index.js",
   "scripts": {
@@ -37,6 +37,8 @@
     "flowcheck": "^0.2.7",
     "flowcheck-loader": "^1.0.0",
     "html-webpack-plugin": "^1.5.2",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
     "node-sass": "^3.3.2",
     "opn": "^3.0.2",
     "postcss-loader": "^0.6.0",

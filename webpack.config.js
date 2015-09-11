@@ -21,6 +21,7 @@ const LOADERS = {
 
     STYLE: 'style',
     CSS: 'css?localIdentName=[path][name]---[local]---[hash:base64:5]',
+    LESS: 'less',
     SASS: 'sass?sourceMap&includePaths[]=' + SRC_PATH,
     POST_CSS: 'postcss',
 };
@@ -91,6 +92,14 @@ module.exports = {
                 LOADERS.CSS,
                 LOADERS.POST_CSS
             ],
+        }, {
+            test: /\.less$/,
+            loaders: [
+                LOADERS.STYLE,
+                LOADERS.CSS,
+                LOADERS.LESS,
+                LOADERS.POST_CSS
+            ]
         }, {
             test: /\.scss$/,
             loaders: [

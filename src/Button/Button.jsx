@@ -1,4 +1,4 @@
-import css from './Button.scss';
+import css from './Button.less';
 import cx from 'classnames';
 import React, {Component} from 'react';
 export default class Button extends Component {
