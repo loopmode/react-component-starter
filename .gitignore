@@ -1,6 +1,5 @@
 node_modules
 /*.log
 /*.sublime-workspace
-/*.sublime-project
 examples
 docs
