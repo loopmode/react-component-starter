@@ -1,3 +1,15 @@
 {
-  "stage": 0,
+    "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread"
+    ],
+    "presets": [
+        "react",
+        "stage-1",
+        ["env", {
+            "targets": {
+                "browsers": ["last 2 versions", "safari >= 7", "ie >= 11"]
+            }
+        }]
+    ]
 }

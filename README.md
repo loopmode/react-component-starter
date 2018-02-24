@@ -1,43 +1,63 @@
-# React component starter
+# react component starter
 
-Quickstart your react component development and use components as npm modules!
+## What is it?
 
-## Usage
+It's a boilerplate project for working on reusable react components.
+The idea is to have a full setup for building a react component, and at the same time
+use a `react-create-app` app for previewing your component and providing a demo/example.
 
-Make sure you have [node.js](https://nodejs.org) installed and `git clone git@github.com:loopmode/react-component-starter.git` this repository.
-Then install and start the project:
+* Preconfigured `eslint` and `prettier`, works with `Sublime Text` with `SublimeLinter` out-of-the-box
+* Preconfigured `esdoc` for documentation
+* Preconfigured `jest` for testing
+* Uses a `create-react-app` app in `/demo` to preview your component in a "realistic scenario"
 
-    cd react-component-starter
-    npm install
-    npm start
+Consider working with https://github.com/storybooks/storybook instead - it might be a better alternative.
 
-### build
-`npm run build` to create a transpiled ES5 version of your `./src` and copy it to `./lib`, which is the module you actually export.  
-`npm run build-watch` to keep rebuilding whenever any source files change.
+## How do I use it?
 
-### react-dev-server
-Run `npm start` to start a development server and preview your component in the browser, standalone.
+This is a boilerplate/template project. You clone it, then adjust it to fit your needs.
 
-### npm link
-Run `npm link` in the root folder of the package. 
-Then, in your actual projects, install it with `npm link your-package-name` and use it just like you would use any other npm module.  
-Now your component is symlinked into your project, so any changes you make to your component are available dependent projects right after you build your sources. Keep the `build-watch` to rebuild whenever you change your sources.
+* remove the `.git` folder
+* adjust package.json - make sure you specify a correct package name
+* adjust this readme file
 
-### in your actual projects
+**NOTE:** Use `yarn setup` to get rid of the `.git` folder and install the component and demo dependencies!
 
-Import or require your component using ES6:
+### CRA demo app
 
-    import MyModule from 'your-package-name';
+In order to use the app in `/demo` for "live preview" while you are working, you need to make your module available to the app.
+The easiest way to achieve this is to `link` your module.
 
-or using ES5 CommonJS:
+* Run `yarn link` in the module folder (e.g. in this folder)
+* Run `yarn link <your-package-name>` in the `/demo` folder
 
-    var MyModule = require('your-package-name');
+E.g. if package name is `my-cool-module`
 
-## Notes
-  
-- To work on multiple standalone components simultanously, you need to tweak the `DEV_SERVER.port` settings in `webpack.config.js`.
+```javascript
+yarn link
+cd demo
+yarn link my-cool-module
+```
 
-## Todos
+### package scripts
 
-- Install testing environment
-- Trigger hot reload in dependent projects. It must be possible!
+* `yarn build` builds the code from `/src` (es6+) to `/lib` (es5)
+* `yarn build --watch` keeps watching and recompiling
+* `yarn test` runs the tests once
+* `yarn test --watch` keeps watching and testing (Note: this only works when your project is under git version control. Use `--watchAll` otherwise)
+* `yarn docs` builds the documentation
+* `yarn demo` starts the development server for the `/demo` app. Same as `cd demo && yarn start`
+
+### So how do I really use it?
+
+A typical workflow heavily relies on the `demo` app. So, you should have set up the `link` already.
+Then, you would manually launch two processes: One that keeps building your component via `yarn build --watch`, and one that keeps building the `demo` app via `yarn demo`.
+That way, you basically get a full, hot-reloaded live working environment.
+
+## Upgrading to react 16:
+
+This is using react 15. If you want to upgrade to react 16, make sure to install the same version for the `react-test-renderer`, or the tests will not run:
+
+```javascript
+yarn add react@16.2.0 react-dom@16.2.0 && yarn --dev react-test-renderer@16.2.0
+```

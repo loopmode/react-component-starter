@@ -1,0 +1,6 @@
+:local(.MyComponent) {
+    display: inline-block;
+    outline: 1px dashed #ddd;
+    padding: 10px;
+    background: #eee;
+}
