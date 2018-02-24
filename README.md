@@ -21,7 +21,7 @@ This is a boilerplate/template project. You clone it, then adjust it to fit your
 * adjust package.json - make sure you specify a correct package name
 * adjust this readme file
 
-**NOTE:** Use `yarn setup` to get rid of the `.git` folder and install the component and demo dependencies!
+**NOTE:** Use `yarn setup` to install both the component and demo app dependencies!
 
 ### CRA demo app
 
